@@ -1,4 +1,4 @@
- /**
+/**
  * ownCloud - Files_External_Aws 
  *
  * This file is licensed under the Affero General Public License version 3 or
@@ -19,9 +19,9 @@
     }
     
     /*
-    * @param Array an object array.
-    * @return Object key is username, value is usage.
-    */
+     * @param Array an object array.
+     * @return Object key is username, value is usage.
+     */
     function transObjToArray(result) {
         var map = {};
         result.forEach(function(v,i) {

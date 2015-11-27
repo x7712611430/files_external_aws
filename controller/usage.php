@@ -19,12 +19,16 @@ class Usage extends Controller{
     
     /*
      * This method is used when ownCloud mounts AWS S3 by mount.json .
+     * @NoAdminRequired
      */
     public function getSizeFromMount($user = ''){
         
         return new DataResponse($this->quota->getQuota($user));
     }
-    
+
+    /**
+     * @NoAdminRequired
+     */
     public function getSizeFromFilecache($user = NULL){
     
         return new DataResponse(\OCP\Util::getUserUsedSpace($user));
